@@ -1,0 +1,12 @@
+Sales Summary
+------------------------------
+ Total Sales: $144,141.10
+
+ Details:
+  manual_sales_1.txt: $13,733.68
+  manual_sales_2.txt: $39,475.83
+  manual_sales_3.txt: $22,983.29
+  manual_sales_4.txt: $38,550.68
+  manual_sales_5.txt: $29,397.62
+
+Report generated: 2026-01-06 11:52:34

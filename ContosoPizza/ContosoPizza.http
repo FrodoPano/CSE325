@@ -1,0 +1,107 @@
+@ContosoPizza_HostAddress = https://localhost:5001
+
+# =============================================
+# Weather Forecast API
+# =============================================
+GET {{ContosoPizza_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# =============================================
+# Pizza API
+# =============================================
+# Get all pizzas
+GET {{ContosoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+###
+
+# Get a specific pizza by ID
+GET {{ContosoPizza_HostAddress}}/pizza/1
+Accept: application/json
+
+###
+
+# Get a non-existent pizza
+GET {{ContosoPizza_HostAddress}}/pizza/999
+Accept: application/json
+
+###
+
+# Create a new pizza
+POST {{ContosoPizza_HostAddress}}/pizza/
+Content-Type: application/json
+
+{
+  "name": "Hawaiian",
+  "isGlutenFree": false
+}
+
+###
+
+# Create another pizza
+POST {{ContosoPizza_HostAddress}}/pizza/
+Content-Type: application/json
+
+{
+  "name": "Pepperoni",
+  "isGlutenFree": true
+}
+
+###
+
+# Update an existing pizza
+PUT {{ContosoPizza_HostAddress}}/pizza/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Classic Italian Supreme",
+  "isGlutenFree": false
+}
+
+###
+
+# Try to update with mismatched ID
+PUT {{ContosoPizza_HostAddress}}/pizza/1
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Wrong ID",
+  "isGlutenFree": true
+}
+
+###
+
+# Delete a pizza
+DELETE {{ContosoPizza_HostAddress}}/pizza/2
+
+###
+
+# Try to delete non-existent pizza
+DELETE {{ContosoPizza_HostAddress}}/pizza/999
+
+###
+
+# =============================================
+# Sales Report API
+# =============================================
+# Generate Sales Report
+POST {{ContosoPizza_HostAddress}}/api/salesreport/generate
+Accept: application/json
+
+###
+
+# Get Latest Sales Report
+GET {{ContosoPizza_HostAddress}}/api/salesreport
+Accept: application/json
+
+###
+
+# Get All Sales Files
+GET {{ContosoPizza_HostAddress}}/api/salesreport/files
+Accept: application/json
+
+###
