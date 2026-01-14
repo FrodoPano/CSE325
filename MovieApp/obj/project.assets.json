@@ -5942,11 +5942,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\frodo\\OneDrive\\Documents\\BYU\\CSE325\\MovieApp\\MovieApp.csproj",
+      "projectUniqueName": "C:\\Users\\frodo\\OneDrive\\Documents\\BYU\\CSE325\\CSE325\\MovieApp\\MovieApp.csproj",
       "projectName": "MovieApp",
-      "projectPath": "C:\\Users\\frodo\\OneDrive\\Documents\\BYU\\CSE325\\MovieApp\\MovieApp.csproj",
+      "projectPath": "C:\\Users\\frodo\\OneDrive\\Documents\\BYU\\CSE325\\CSE325\\MovieApp\\MovieApp.csproj",
       "packagesPath": "C:\\Users\\frodo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\frodo\\OneDrive\\Documents\\BYU\\CSE325\\MovieApp\\obj\\",
+      "outputPath": "C:\\Users\\frodo\\OneDrive\\Documents\\BYU\\CSE325\\CSE325\\MovieApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\frodo\\AppData\\Roaming\\NuGet\\NuGet.Config"

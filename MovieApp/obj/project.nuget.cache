@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p//Q/clS/Mg=",
+  "dgSpecHash": "Nj0TTi4051w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\frodo\\OneDrive\\Documents\\BYU\\CSE325\\MovieApp\\MovieApp.csproj",
+  "projectFilePath": "C:\\Users\\frodo\\OneDrive\\Documents\\BYU\\CSE325\\CSE325\\MovieApp\\MovieApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\frodo\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\frodo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
