@@ -26,12 +26,32 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/frodo/OneDrive/Documents/BYU/CSE325/CSE325/BlazingPizza/Pages/Checkout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/frodo/OneDrive/Documents/BYU/CSE325/CSE325/BlazingPizza/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/frodo/OneDrive/Documents/BYU/CSE325/CSE325/BlazingPizza/Pages/MyOrders.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlPcmRlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frodo/OneDrive/Documents/BYU/CSE325/CSE325/BlazingPizza/Pages/OrderDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJEZXRhaWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frodo/OneDrive/Documents/BYU/CSE325/CSE325/BlazingPizza/Pages/Simple.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2ltcGxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/frodo/OneDrive/Documents/BYU/CSE325/CSE325/BlazingPizza/Shared/ConfigurePizzaDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbmZpZ3VyZVBpenphRGlhbG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/frodo/OneDrive/Documents/BYU/CSE325/CSE325/BlazingPizza/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/frodo/OneDrive/Documents/BYU/CSE325/CSE325/BlazingPizza/_Imports.razor]

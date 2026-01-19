@@ -31,9 +31,6 @@ public class OrdersController : Controller
     {
         order.CreatedTime = DateTime.Now;
 
-        // Enforce existence of Pizza.SpecialId and Topping.ToppingId
-        // in the database - prevent the submitter from making up
-        // new specials and toppings
         foreach (var pizza in order.Pizzas)
         {
             pizza.SpecialId = pizza.Special.Id;

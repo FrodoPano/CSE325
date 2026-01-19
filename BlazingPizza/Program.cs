@@ -1,12 +1,16 @@
 using BlazingPizza;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddHttpClient();
-builder.Services.AddSqlite<PizzaStoreContext>("Data Source=pizza.db");
 builder.Services.AddScoped<OrderState>();
+
+// Register DbContext - USE ONLY ONE OF THESE:
+builder.Services.AddDbContext<PizzaStoreContext>(options => 
+    options.UseSqlite("Data Source=pizza.db"));
 
 var app = builder.Build();
 
@@ -21,19 +25,40 @@ app.UseRouting();
 app.MapRazorPages();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
-app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+
+// Map API controllers
+app.MapControllers();
 
 // Initialize the database
 var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
 using (var scope = scopeFactory.CreateScope())
 {
-    var db = scope.ServiceProvider.GetRequiredService<PizzaStoreContext>();
-    if (db.Database.EnsureCreated())
+    try
     {
-        SeedData.Initialize(db);
+        var db = scope.ServiceProvider.GetRequiredService<PizzaStoreContext>();
+        Console.WriteLine("Attempting to create/connect to database...");
+        
+        if (db.Database.EnsureCreated())
+        {
+            Console.WriteLine("Database created successfully");
+            SeedData.Initialize(db);
+            Console.WriteLine("Seed data initialized");
+        }
+        else
+        {
+            Console.WriteLine("Database already exists");
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Database initialization error: {ex.Message}");
+        Console.WriteLine($"Stack trace: {ex.StackTrace}");
+        // Re-throw to see the error
+        throw;
     }
 }
 
 
-app.Run();
+app.MapGet("/test", () => "Server is running!");
 
+app.Run();

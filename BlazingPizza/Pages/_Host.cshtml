@@ -2,6 +2,10 @@
 @namespace BlazingPizza.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
+@{
+    Layout = null;
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +22,7 @@
     <div id="app">
       <div class="content">
         
+        <component type="typeof(App)" render-mode="ServerPrerendered" />
       </div>
     </div>
 

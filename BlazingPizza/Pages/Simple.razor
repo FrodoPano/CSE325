@@ -1,0 +1,12 @@
+@page "/simple"
+
+<h1>Simple Test Page</h1>
+<p>Current time: @DateTime.Now</p>
+<p>If you see this, Blazor is working.</p>
+
+@code {
+    protected override void OnInitialized()
+    {
+        Console.WriteLine("Simple page loaded");
+    }
+}
