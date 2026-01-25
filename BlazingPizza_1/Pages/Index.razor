@@ -1,0 +1,58 @@
+@page "/"
+@inject OrderState OrderState
+@inject HttpClient HttpClient
+@inject NavigationManager NavigationManager
+
+<PageTitle>Blazing Pizza</PageTitle>
+
+<div class="main">
+    <h1>BLAZING PIZZAS</h1>
+    
+    <div class="content-container">
+        <!-- Pizza List on Left -->
+        <div class="pizza-list-container">
+            @if (specials == null)
+            {
+                <div class="loading">Loading pizzas...</div>
+            }
+            else
+            {
+                @foreach (var special in specials)
+                {
+                    <div class="pizza-item">
+                        <h2>@special.Name.ToUpper()</h2>
+                        <p class="description">@special.Description</p>
+                        <div class="price">$@special.BasePrice.ToString("0.00")</div>
+                        <hr />
+                    </div>
+                }
+            }
+        </div>
+        
+        <!-- Order Summary on Right -->
+        <div class="sidebar">
+            <div class="order-summary">
+                <h3>Your Order</h3>
+                <div class="order-total">
+                    <span>Total:</span>
+                    <span class="total-price">$0.00</span>
+                    <button class="btn btn-warning" @onclick="GoToCheckout">Order ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    List<PizzaSpecial> specials = new List<PizzaSpecial>();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        specials = await HttpClient.GetFromJsonAsync<List<PizzaSpecial>>("specials");
+    }
+    
+    void GoToCheckout()
+    {
+        NavigationManager.NavigateTo("/checkout");
+    }
+}
